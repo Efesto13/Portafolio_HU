@@ -59,8 +59,7 @@ h1 {
     transform: scale(1.1);
 }
 
-.Navegation nav {
-    border-radius: 10px;
+.Navegation nav { 
     display: flex;
     align-items: center;
     justify-content: center;
