@@ -1,30 +1,19 @@
 /* Colors */
 
 :root {
-    --color-black: #000000;
-    --color-white: #ffffff;
+    --color-black: black;
+    --color-white: white;
     --color-shadow-gray: rgb(170, 170, 170);
-    --color-shadow-light: rgba(223, 216, 216, 0.918);
     --color-pink: rgb(214, 83, 197);
-    --color-purple: rgb(160, 7, 248);
-    --color-dark-bg: #030303;
-    --color-smoke: whitesmoke;
-    --color-azure: azure;
+    --color-shadow-light: rgba(223, 216, 216, 0.918);
+    --color-bisque: bisque;
 }
 
-/* Globals */
+/* Global */
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     background-color: var(--color-black);
     color: var(--color-white);
-}
-
-main{
-    flex: 1;
-    padding-bottom: 40px;
 }
 
 /* Navegation Area */
@@ -58,17 +47,18 @@ h1 {
     position: absolute;
     width: 5%;
     left: 1%;
-    top: 1.5%;
+    top: 2.5%;
     border-radius: 100px;
     box-shadow: 0px 0px 1px 1px var(--color-shadow-light);
     transition: 1s ease-out;
 }
 
 .photo-profile:hover {
+    transition: 1s ease-out;
     transform: scale(1.1);
 }
 
-.Navegation nav {
+.Navegation nav { 
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -82,7 +72,7 @@ h1 {
     color: var(--color-black);
     text-shadow: 0px 1px 1px var(--color-pink);
     font-size: 25px;
-    margin-top: 1.5%;
+    margin-top: 2.5%;
     transition: 1s ease;
 }
 
@@ -90,61 +80,44 @@ a.link:hover {
     transform: translateY(-7px);
 }
 
-/* Projects Area */
+/* Pets  */
 
-.projects {
+.mascota {
+    margin: 10px 10px 10px;
+    border-radius: 1px;
+    border-color: var(--color-bisque);
+    margin-top: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--color-white);
+}
+
+.mascotas {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.fotos {
+    height: auto;
+    max-width: 35%;
+    border-radius: 5%;
+    margin: 10px;
+}
+
+/* Additional Information(Footer) */
+
+footer {
+    height: 100%;
+    text-align: center;
     margin-top: 5%;
 }
 
-.porjects {
-    display: flex;
-    justify-content: center;
-}
 
-.container-py,.container-ht {
-    box-shadow: 0px 0px 10px var(--color-smoke);
-    border-radius: 10px;
-    width: 50%;
-    text-align: center;
-    
-}
-
-.container-py img,.container-ht img {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-.list-py li,.list-htlm li {
-    list-style: none;
-    text-align: center;
-}
-
-.list-py,.list-htlm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0%;
-    gap: 20px;
-    
-}
-
-.link_projects {
-  text-decoration: none;
-  color: var(--color-azure);
-}
-
-footer{
-    padding: 20px;
-    text-align: center;
-    text-align: center;
-    color: white;
-}
 /* Responsive */
+
+
+/* Laptop */
 
 @media (max-width:1330px){
     
@@ -161,7 +134,7 @@ footer{
 
     .link{
         font-size: 140%;
-        margin-top: 2%;
+        margin-top: 4%;
     }      
 }
 
@@ -180,7 +153,7 @@ footer{
 
     .link{
         font-size: 140%;
-        margin-top: 3%;
+        margin-top: 5%;
     }      
 }
 
@@ -188,15 +161,18 @@ footer{
 
 @media (max-width:768px){
     .photo-profile{
-        width: 8.5%;
+        width: 7.5%;
         margin-top: 2.5%;
         margin-left: 1.2%;
     }
 
+    .Navegation nav{
+        gap: 10%;
+    }
 
     .link{
         font-size: 140%;
-        margin-top: 4%;
+        margin-top: 7%;
     }
 
     .mascotas{
@@ -218,15 +194,12 @@ footer{
     .Navegation nav{
         gap: 6%;
     }
-    
     .link{
         font-size: 120%;
-        margin-top: 9%;
+        margin-top: 13%;
     }
 
-    .projects{
+    .mascotas{
         grid-template-columns: repeat(1,1fr);
-        gap: 15%;
-        margin-top: 10%;
     }
 }
